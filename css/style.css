@@ -1,0 +1,324 @@
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: black;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Menjaga item dalam satu baris */
+  align-items: center; /* Sejajarkan item navbar secara vertikal */
+  justify-content: flex-start; /* Rata kiri untuk item */
+  margin-top: -80px;
+}
+
+nav ul li {
+  display: flex; /* Menggunakan flex untuk kontrol lebih baik */
+  align-items: center; /* Sejajarkan teks secara vertikal */
+  justify-content: center; /* Menjaga teks tetap di tengah */
+  padding: 10px 15px; /* Padding yang konsisten */
+  border: 1px solid black;
+  margin: 0; /* Hapus margin untuk menjaga jarak minimal */
+  min-width: 100px; /* Menetapkan lebar minimal untuk setiap item */
+  box-sizing: border-box; /* Menghindari overflow dari padding */
+}
+nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.nav-links {
+  display: flex; /* Default display for larger screens */
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.img-slideshow {
+  display: none;
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.head {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profiles {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  height: 300px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  order: 2;
+}
+.message {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  height: 350px;
+}
+.form input,
+.form select {
+  padding: 4px; /* Decrease padding for a smaller size */
+  margin: 4px 0; /* Reduce space between inputs */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  font-size: 13px; /* Slightly smaller font size */
+  transition: border 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.form input:focus,
+.form select:focus {
+  border: 1px solid #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
+  outline: none; /* Remove default outline */
+}
+
+.form textarea {
+  position: relative;
+  margin-left: 6%; /* Maintain original positioning */
+  padding: 4px; /* Decrease padding for a smaller size */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  font-size: 13px; /* Slightly smaller font size */
+  transition: border 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.form textarea:focus {
+  border: 1px solid #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
+  outline: none; /* Remove default outline */
+}
+
+.form label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 3px; /* Reduced space below the label */
+  display: block; /* Make labels block elements */
+  color: #333; /* Darker color for labels */
+  font-size: 13px; /* Slightly smaller font size for labels */
+}
+
+.large-textarea {
+  width: 400px; /* Keep original width */
+  padding: 10px; /* Maintain padding */
+  position: relative;
+  top: -320px; /* Maintain original positioning */
+  left: 450px; /* Maintain original positioning */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  transition: border 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.large-textarea textarea {
+  padding: 4px; /* Decrease padding for a smaller size */
+  font-size: 13px; /* Slightly smaller font size */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+}
+
+.large-textarea textarea:focus {
+  border: 1px solid #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
+  outline: none; /* Remove default outline */
+}
+
+/* Responsif dengan media queries */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .content {
+    max-width: 800px;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .large-textarea {
+    left: 400px;
+    width: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    margin-left: 90px;
+    margin-top: -25px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .profiles {
+    height: auto;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .message {
+    height: auto;
+  }
+
+  .large-textarea {
+    width: calc(
+      100% - 40px
+    ); /* Make it responsive and take full width minus padding */
+    left: 0; /* Reset left position */
+    top: 0; /* Reset top position */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .head {
+    font-size: 20px;
+  }
+
+  .form input,
+  .form select,
+  .form textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .large-textarea {
+    padding: 10px;
+  }
+}
+.hamburger {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex; /* Default display for larger screens */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  nav {
+    display: none; /* Hide nav by default on small screens */
+    width: 100%;
+    background-color: white;
+    position: absolute; /* Position it absolutely */
+    top: 60px; /* Adjust according to header height */
+    left: 0;
+    z-index: 1; /* Ensure it appears above other elements */
+  }
+
+  nav.active {
+    display: block; /* Show nav when active */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 10px; /* Padding for each nav item */
+    border-bottom: 1px solid black; /* Optional border for each item */
+  }
+}
+
+footer {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+}
